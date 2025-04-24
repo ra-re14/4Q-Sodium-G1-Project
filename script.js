@@ -16,6 +16,6 @@ function storeUsername(e) {
     return;
   }
 
-  document.cookie = 'username={name}; path=/; max-age={60 * 60 * 24 * 30}';
+  document.cookie = name;
   alert('Welcome, ' + name + '! Get ready to jump!');
 }
