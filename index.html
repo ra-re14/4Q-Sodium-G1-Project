@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="Daguro, Calimba, Sumahit, Perrett, Mendez, Recla">
+  <title>Miming Jump!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="overlay">
+    <h1>MIMING JUMP!</h1>
+    <div id="cat-sprite"></div>
+
+    <div class="mechanics">
+      <p><strong>1.</strong> Press <strong>JUMP</strong> or the <strong>SPACE BAR</strong> to avoid the obstacles</p>
+      <p><strong>2.</strong> The <strong>SPEED</strong> will depend on the <strong>DIFFICULTY LEVEL</strong></p>
+      <p><strong>3.</strong> Your <strong>SCORE</strong> will get higher the <strong>LONGER</strong> you play</p>
+      <p><strong>4.</strong> Do your best to get <strong>TOP 1</strong> in the leaderboard and <strong>GOOD LUCK</strong></p>
+    </div>
+
+    <form onsubmit="storeUsername(event)">
+      <p>Enter your name to start playing:</p>
+      <input type="text" id="username" required />
+      <button type="submit">Start Game</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
