@@ -16,6 +16,6 @@ function storeUsername(e) {
     return;
   }
 
-  document.cookie = name;
+  document.cookie = 'username=' + name;
   alert('Welcome, ' + name + '! Get ready to jump!');
 }
