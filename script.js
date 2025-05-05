@@ -1,14 +1,13 @@
 window.onload = function () {
   const name = document.cookie.split('; ').find(row => row.startsWith('username='));
   if (name) {
-    const value = name.split('=')[1];
+    const value = name;
     alert('Welcome back,' + value + '!' );
   }
 }
 
 function storeUsername(e) {
   const name = document.getElementById("username").value;
-  console.log(name);
 
  
   if (name.trim() === "" || !/^[a-zA-Z0-9]+$/.test(name)) {
