@@ -1,15 +1,17 @@
 const catto = document.getElementById("catto");
 const obstacles = document.getElementById("obstacles");
+var score = 0
+var isScoreAdded = false;
 
-onload = setScore();
-function setScore() {
-  var score = 0;
-  var scoreElement = document.getElementById("score");
+
+function setScore(){
+  score = 0;
+  document.getElementById('score').innerHTML = 'score: ' + score;
 }
 
-function updateScore() {
+function updateScore(){
   score++;
-  scoreElement.innerHTML = "Score: " + score;
+  document.getElementById('score').innerHTML = 'score: ' + score;
 }
 
 function jump() {
@@ -39,12 +41,35 @@ let isAlive = setInterval(function () {
   if (Math.abs(cattoLeft - obstaclesLeft) < 40 && cattoTop >= 140) {
     // collision
     alert("Game Over!");
+    var highScore = document.cookie.split('; ').find(row => row.startsWith('score='));
+    if (highScore) {
+      highScore = (highScore.split('=')[1]).parseInt
+      if (highScore < score){
+        document.cookie = 'score=' + score;
+      }
+    }else{
+      document.cookie = 'score=' + score;
+    }
+
+    location.reload();
+
   }
 
-  if (obstaclesLeft < 0) {
+  if(obstaclesLeft < -10 && isScoreAdded == false){
     updateScore();
+    isScoreAdded = true;
+
   }
+
+  if(obstaclesLeft >= -10){
+    isScoreAdded = false;
+  }
+
 }, 10);
+
+
+
+
 
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {

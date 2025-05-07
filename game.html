@@ -6,11 +6,14 @@
     <title>Catto Jump Simulator</title>
     <link rel="stylesheet" href="styleGame.css">
   </head>
-  <body>
+  <body onload="setScore()">
+    <a href="index.html">
+      <button>Back to Menu</button>
+    </a>
     <div class="game">
       <div id="catto"></div>
       <div id="obstacles"></div>
-      <div id="score"></div>
+      <div id="score">score: 0</div>
     </div>
     <script src="scriptGame.js"></script>
   </body>

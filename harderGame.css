@@ -1,0 +1,74 @@
+.game {
+    width: 600px;
+    height: 200px;
+    background-image: url("bg.png");
+    border: 3px solid #6B5059;
+    margin-top: 200px;
+    margin-left: 250px;
+  }
+  
+  
+  
+  #catto {
+    width: 50px;
+    height: 50px;
+    background-image: url("catto.png");
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+    left: 6px;
+  }
+  
+  #catto::after {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .jump {
+    background-image: url("jump.png");
+    background-size: 50px 50px;
+    animation: jump 0.8s linear;
+  }
+  
+  @keyframes jump {
+    0% {
+      top: 150px;
+    }
+  
+    25% {
+      top: 80px;
+    }
+    50% {
+      top: 150px;
+    }
+    75% {
+      top: 80px;
+    }
+    100% {
+      top: 150px;
+    }
+  }
+  
+  #obstacles {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+  
+    background-image: url("obstacles.jpg");
+    background-size: 20px 40px;
+  
+    animation: block 3s infinite linear;
+  }
+  
+  @keyframes block {
+    0% {
+      left: 580px;
+    }
+  
+    100% {
+      left: -20px;
+    }
+  }
