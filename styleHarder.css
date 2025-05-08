@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #000;
+    color: red;
+  }
+  
+  .mechanics {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .mechanics strong {
+    color: #FFD700;
+  }
+  
+  #cat-sprite {
+    width: 98px;
+    height: 86px;
+    margin: 30px auto;
+    background: url('cat_sprite.jpg') no-repeat -15px -127px;
+    animation: walk 0.2s steps(4) infinite;
+  }
+  
+  @keyframes walk {
+    from { background-position: -15px -127px }
+    to { background-position: -379px -127px; }
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ffb700;
+  }
+  

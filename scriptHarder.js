@@ -7,11 +7,27 @@ var isScoreAdded = false;
 function setScore(){
   score = 0;
   document.getElementById('score').innerHTML = 'score: ' + score;
+  var highScore = document.cookie.split('; ').find(row => row.startsWith('score='));
+  if (highScore) {
+    highScore = parseInt(highScore.split('=')[1]);
+    document.getElementById('highscore').innerHTML = 'Highscore: ' + highScore;
+  }else{
+    document.getElementById('highscore').innerHTML = 'Highscore: 0';
+  }
 }
 
 function updateScore(){
   score++;
-  document.getElementById('score').innerHTML = 'score: ' + score;
+  document.getElementById('score').innerHTML = 'Score: ' + score;
+  var highScore = document.cookie.split('; ').find(row => row.startsWith('score='));
+  if (highScore) {
+    highScore = parseInt(highScore.split('=')[1]);
+    if (score > highScore){
+      document.getElementById('highscore').innerHTML = 'Highscore: ' + score;
+    }
+  }else{
+    document.getElementById('highscore').innerHTML = 'Highscore: ' + score;
+  }
 }
 
 function jump() {
@@ -43,8 +59,8 @@ let isAlive = setInterval(function () {
     alert("Game Over!");
     var highScore = document.cookie.split('; ').find(row => row.startsWith('score='));
     if (highScore) {
-      highScore = (highScore.split('=')[1]).parseInt
-      if (highScore < score){
+      highScore = parseInt(highScore.split('=')[1]);
+      if (score > highScore){
         document.cookie = 'score=' + score;
       }
     }else{
@@ -64,9 +80,9 @@ let isAlive = setInterval(function () {
   if(obstaclesLeft >= -10){
     isScoreAdded = false;
   }
+  
 
 }, 10);
-
 
 
 

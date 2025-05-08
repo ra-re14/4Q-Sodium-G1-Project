@@ -1,10 +1,43 @@
+#score {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #6B5059;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #6B5059;
+}
+
+#highscore {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #6B5059;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #6B5059;
+}
+  
+
+body {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+}
+
 .game {
   width: 600px;
   height: 200px;
   background-image: url("bg.png");
   border: 3px solid #6B5059;
-  margin-top: 200px;
-  margin-left: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #catto {
